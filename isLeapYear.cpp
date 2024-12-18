@@ -1,29 +1,18 @@
 #include <iostream>
 using namespace std;
-int main()
+bool isLeapYear(unsigned short int year)
 {
-    short int year;
-    cout << "year: ";
-    cin >> year;
     if (year % 100 == 0)
     {
-        if (year % 400 == 0)
-        {
-            cout << "leap year" << endl;
-        }
-        else
-        {
-            cout << "not leap year" << endl;
-        }
-    }
-    else if (year % 4 == 0)
-    {
-        cout << "leap year" << endl;
+        return year % 400 == 0;
     }
     else
     {
-        cout << "not leap year" << endl;
+        return year % 4 == 0;
     }
-
+}
+int main()
+{
+    cout << isLeapYear(1976) << "\n";
     return 0;
 }
